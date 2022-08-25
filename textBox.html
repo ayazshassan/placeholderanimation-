@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placeholder animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+        font-family: "Ubuntu", sans-serif;
+      }
+
+      .custom-input {
+        position: relative;
+      }
+      .custom-input input {
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid green;
+      }
+      .custom-input span {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        transition: all 0.3s;
+      }
+
+      .custom-input input:focus {
+        outline: none !important;
+      }
+      .custom-input input:focus ~ span,
+      .custom-input input:valid ~ span {
+        top: -9.5px;
+        background-color: white;
+        padding: 0 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom-input">
+      <input type="text" required />
+      <span>First Name</span>
+    </div>
+    <div class="custom-input">
+      <input type="text" required />
+      <span>Last Name</span>
+    </div>
+  </body>
+</html>
